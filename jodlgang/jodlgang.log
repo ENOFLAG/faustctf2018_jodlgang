@@ -1,0 +1,19 @@
+Not Found: /favicon.ico
+Retrieving face recognition CNN
+Converting image to numpy array
+Inference took 5.8220055103302 seconds ...
+Exception in face recognition:  (<class 'django.core.exceptions.PermissionDenied'>)
+Retrieving face recognition CNN
+Converting image to numpy array
+Inference took 4.927523851394653 seconds ...
+Exception in face recognition:  (<class 'django.core.exceptions.PermissionDenied'>)
+Retrieving face recognition CNN
+Converting image to numpy array
+Inference took 4.304695129394531 seconds ...
+Retrieving face recognition CNN
+Converting image to numpy array
+Inference took 4.313903570175171 seconds ...
+Retrieving face recognition CNN
+Converting image to numpy array
+Inference took 4.7962963581085205 seconds ...
+Exception in face recognition:  (<class 'django.core.exceptions.PermissionDenied'>)

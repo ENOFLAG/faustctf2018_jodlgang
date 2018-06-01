@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}
+    <title>Login</title>
+    <link href="{% static 'css/login.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+    <!--
+    {% if next %}
+        {% if user.is_authenticated %}
+            <p>Your account doesn't have access to this page. To proceed,
+                please login with an account that has access.</p>
+        {% else %}
+            <p>Please login to see this page.</p>
+        {% endif %}
+    {% endif %}
+    -->
+
+    <form class="form-signin" method="post" action="{% url 'login' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="text-center">
+            <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        </div>
+
+        <div class="text-center" id="errors">
+            {% if form.errors %}
+                <p>Permission denied</p>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.username.label_tag }}
+            {% render_field form.username class="form-control" %}
+        </div>
+
+        <!--
+        {{ form.password.label_tag }}
+        {% render_field form.password class="form-control" %}
+        -->
+
+        <div class="form-group">
+            <label for="id_face_img">A webcam photo of your face:</label>
+            {% render_field form.face_img class="form-control" %}
+        </div>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+{% endblock %}
